@@ -14,6 +14,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
 import subprocess
 import sys
+import matplotlib.pyplot as plt
+
 
 subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib==3.7.2"])
 
@@ -125,4 +127,5 @@ if pca_components >= 2:
     plt.legend()
     plt.grid(True)
     st.pyplot(plt)
+
 

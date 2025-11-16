@@ -12,6 +12,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib==3.7.2"])
+
 
 st.set_page_config(page_title="Breast Cancer PCA & ML", layout="wide")
 st.title("Breast Cancer Classification with PCA & Machine Learning")
@@ -120,3 +125,4 @@ if pca_components >= 2:
     plt.legend()
     plt.grid(True)
     st.pyplot(plt)
+
